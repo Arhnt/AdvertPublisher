@@ -1,6 +1,6 @@
 package com.zamaruev.advert;
 
-import com.zamaruev.advert.ui.MainFrame;
+import com.zamaruev.advert.ui.main.MainFrame;
 
 import java.awt.*;
 
