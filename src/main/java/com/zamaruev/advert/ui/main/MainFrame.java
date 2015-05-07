@@ -10,12 +10,14 @@ public class MainFrame extends JFrame {
     private JMenuBar menu;
 
     public MainFrame() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Advert Publisher Application");
         // TODO-VZ: Use Properties API to restore previous location and position
         setSize(600, 400);
         addMenuBar();
         // TODO-VZ: addToolbar();
         addTableView();
+        System.out.println(SwingUtilities.isEventDispatchThread());
     }
 
     private void addMenuBar() {
