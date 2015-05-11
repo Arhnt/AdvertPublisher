@@ -1,10 +1,13 @@
 package com.zamaruev.advert.business.services;
 
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class AdvertService {
+@Service
+public class AdItemService {
 
     private final static String[] SIZES = new String[]{"S", "M", "L", "XL"};
     private final static String[] GENDERS = new String[]{"Male", "Female", "Unisex"};

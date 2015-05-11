@@ -1,6 +1,6 @@
 package com.zamaruev.advert.ui.main;
 
-import com.zamaruev.advert.ui.table.ItemTableModel;
+import com.zamaruev.advert.ui.table.AdItemTableModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,21 +25,28 @@ public class MainFrame extends JFrame {
 
         // TODO-VZ: Use actions
         JMenu file = new JMenu("File");
-        file.add("New");
-        file.add("Save").setEnabled(false);
-        file.add("Close").setEnabled(false);
-        file.addSeparator();
         file.add("Exit").addActionListener(a -> System.exit(0));
         menu.add(file);
 
+        JMenu actions = new JMenu("Actions");
+        actions.add("New");
+        actions.add("Edit").setEnabled(false);
+        actions.add("Save").setEnabled(false);
+        actions.add("Close").setEnabled(false);
+        actions.add("Publish").setEnabled(false);
+        menu.add(actions);
+
         JMenu settings = new JMenu("Settings");
+        settings.add("System");
+        settings.add("Interface");
+        settings.add("Resources");
         menu.add(settings);
 
         setJMenuBar(menu);
     }
 
     private void addTableView() {
-        JTable tableView = new JTable(new ItemTableModel());
+        JTable tableView = new JTable(new AdItemTableModel());
         tableView.setAutoCreateRowSorter(true);
         JScrollPane scroll = new JScrollPane(tableView);
         add(scroll, BorderLayout.CENTER);
