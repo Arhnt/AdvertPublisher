@@ -4,7 +4,7 @@ import com.zamaruev.advert.core.entities.AdItem;
 import org.springframework.data.repository.CrudRepository;
 
 /**
- * Created by vzamaruiev on 11.05.2015.
+ * Spring Data Repository
  */
 public interface AdItemDao extends CrudRepository<AdItem, Long> {
 }

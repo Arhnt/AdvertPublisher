@@ -17,7 +17,6 @@ public class MainFrame extends JFrame {
         addMenuBar();
         // TODO-VZ: addToolbar();
         addTableView();
-        System.out.println(SwingUtilities.isEventDispatchThread());
     }
 
     private void addMenuBar() {
