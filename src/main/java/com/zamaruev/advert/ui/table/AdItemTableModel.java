@@ -1,20 +1,21 @@
 package com.zamaruev.advert.ui.table;
 
 import com.zamaruev.advert.business.services.AdItemService;
+import com.zamaruev.advert.config.ApplicationContextProvider;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.*;
 
 /**
  * Item table view model with random values.
- * Created by vzamaruiev on 03.05.2015.
  */
 public class AdItemTableModel extends AbstractTableModel {
 
     private final static String[] COLUMNS = new String[]{"#", "Title", "Price", "Size", "Gender", "Color"};
     private Random random = new Random();
     private List<Map<String, Object>> items = new ArrayList<>();
-    private AdItemService service = new AdItemService();
+
+    private AdItemService service = ApplicationContextProvider.getApplicationContext().getBean(AdItemService.class);
 
     public AdItemTableModel() {
         int itemsCount = random.nextInt(100);
